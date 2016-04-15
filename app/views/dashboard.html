@@ -1,0 +1,49 @@
+<div class="row">
+    <div class="col s12 m6">
+        <div class="card small amber darken-4">
+            <div class="white-text">
+                <span class="card-title">NSCL</span>
+                <canvas id="radar" class="chart chart-radar" chart-data="data" chart-labels="labels">
+                </canvas>
+            </div>
+            <div class="card-action">
+                <a ng-click="randomize()" href>Randomize</a>
+            </div>
+        </div>
+    </div>
+    <div class="col s12 m6">
+        <div class="card small orange darken-4">
+            <div class="white-text">
+                <span class="card-title">GSCL</span>
+                <canvas id="polar-area" class="chart chart-polar-area" chart-data="data2" chart-labels="labels2">
+                </canvas>
+            </div>
+            <div class="card-action">
+                <a ng-click="randomize()" href>Randomize</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="row">
+        <table class="responsive-table striped">
+            <thead>
+                <tr>
+                    <th data-field="label" ng-repeat="label in labels3">{{label}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td ng-repeat="data in data3[0]">{{data}}</td>
+                </tr>
+                <tr>
+                    <td ng-repeat="data in data3[1]">{{data}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="row">
+        <canvas id="line" class="chart chart-line" chart-data="data3" chart-labels="labels3" chart-legend="true" chart-series="series3" chart-click="onClick">
+        </canvas>
+    </div>
+</div>
