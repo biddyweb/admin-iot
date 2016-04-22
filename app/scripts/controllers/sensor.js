@@ -8,7 +8,7 @@
  * Controller of the iotApp
  */
 angular.module('iotApp')
-    .controller('SensorCtrl', function($scope, $http) {
+    .controller('SensorCtrl', function($scope, $http, $JXON) {
         $scope.sensors = [{
             app: 'LAMP',
             name: 'Đo độ sáng',
@@ -41,8 +41,8 @@ angular.module('iotApp')
         // })
 
         console.log('hello');
-        usingajax();
-        
+        // usingajax();
+        $scope.par = $JXON.stringToJs('<om2m:sclBase><om2m:accessRightID>nscl/accessRights/AR_ADMIN</om2m:accessRightID><om2m:searchStrings><om2m:searchString>ResourceType/SclBase</om2m:searchString><om2m:searchString>ResourceID/nscl</om2m:searchString></om2m:searchStrings><om2m:creationTime>2016-04-19T02:47:56.169+07:00</om2m:creationTime><om2m:lastModifiedTime>2016-04-19T02:47:56.172+07:00</om2m:lastModifiedTime><om2m:sclsReference>nscl/scls</om2m:sclsReference><om2m:applicationsReference>nscl/applications</om2m:applicationsReference><om2m:containersReference>nscl/containers</om2m:containersReference><om2m:groupsReference>nscl/groups</om2m:groupsReference><om2m:accessRightsReference>nscl/accessRights</om2m:accessRightsReference><om2m:subscriptionsReference>nscl/subscriptions</om2m:subscriptionsReference><om2m:discoveryReference>nscl/discovery</om2m:discoveryReference></om2m:sclBase>');
 
     });
 

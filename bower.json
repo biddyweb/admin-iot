@@ -9,7 +9,7 @@
     "Materialize": "materialize#v0.97.2",
     "angular-translate": "^2.11.0",
     "angular-chart.js": "^0.9.0",
-    "angular-xml": "^2.2.1"
+    "angular-jxon": "*"
   },
   "appPath": "app",
   "moduleName": "iotApp"

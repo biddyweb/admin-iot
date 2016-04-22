@@ -9,7 +9,7 @@
  */
 angular.module('iotApp')
     .config(function($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise("/main/dashboard");
+        $urlRouterProvider.otherwise("/main/sensor");
         $stateProvider
             .state('main', {
                 url: "/main",

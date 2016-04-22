@@ -15,5 +15,5 @@ angular
     'ui.router',
     'pascalprecht.translate',
     'chart.js',
-    'xml'
+    'angular-jxon'
   ]);

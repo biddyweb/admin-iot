@@ -31,8 +31,7 @@ module.exports = function(config) {
       'bower_components/angular-translate/angular-translate.js',
       'bower_components/Chart.js/Chart.js',
       'bower_components/angular-chart.js/dist/angular-chart.js',
-      'bower_components/x2js/xml2json.min.js',
-      'bower_components/angular-xml/angular-xml.js',
+      'bower_components/angular-jxon/dist/module.min.js',
       // endbower
       "app/scripts/**/*.js",
       "test/mock/**/*.js",
