@@ -2,14 +2,15 @@
   "name": "iot",
   "version": "0.0.0",
   "dependencies": {
+    "Materialize": "materialize#v0.97.5",
     "angular": "^1.3.0",
     "angular-animate": "^1.3.0",
     "angular-messages": "^1.3.0",
     "angular-ui-router": "ui-router#^0.2.18",
-    "Materialize": "materialize#v0.97.2",
     "angular-translate": "^2.11.0",
     "angular-chart.js": "^0.9.0",
-    "angular-jxon": "*"
+    "angular-jxon": "*",
+    "angularUtils-pagination": "angular-utils-pagination#^0.11.1"
   },
   "appPath": "app",
   "moduleName": "iotApp"

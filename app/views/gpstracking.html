@@ -1,0 +1,37 @@
+<table class="striped hover responsive-table">
+    <thead>
+        <tr>
+            <th data-field="stt">STT</th>
+            <th data-field="appid" translate="GPSTRACKING.APPID"></th>
+            <th data-field="useremail" translate="GPSTRACKING.EMAIL"></th>
+            <th data-field="timestamp" translate="GPSTRACKING.TIMESTAMP"></th>
+            <th data-field="latitude" translate="GPSTRACKING.LATITUDE"></th>
+            <th data-field="longitude" translate="GPSTRACKING.LONGTITUDE"></th>
+            <th data-field="address" translate="GPSTRACKING.ADDRESS"></th>
+            <th data-field="velocity" translate="GPSTRACKING.VELOCITY"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <div class="row">
+            <div class="input-field col s12 m10 l10">
+                <input id="search" type="text" class="validate" ng-model="search" />
+                <label for="search" translate="HEADER.SEARCH"></label>
+            </div>
+            <div class="input-field col s6 m2 l2">
+                <span translate="HEADER.ITEMPERPAGE"></span>
+                <input id="pagiSize" type="number" class="validate" ng-model="pageSize" />
+            </div>
+        </div>
+        <tr dir-paginate="data in datas | filter:search | itemsPerPage: pageSize" current-page="currentPage" pagination-id="dataid">
+            <td>{{$index + 1}}</td>
+            <td>{{data.appid}}</td>
+            <td>{{data.useremail}}</td>
+            <td>{{data.timestamp}}</td>
+            <td>{{data.latitude}}</td>
+            <td>{{data.longtitude}}</td>
+            <td>{{data.address}}</td>
+            <td>{{data.velocity}}</td>
+        </tr>
+    </tbody>
+</table>
+<dir-pagination-controls boundary-links="true" pagination-id="dataid" data-max-size="paginateSize" template-url="views/blocks/pagination.tpl.html"></dir-pagination-controls>

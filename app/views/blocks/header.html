@@ -1,23 +1,55 @@
-<div ng-controller="HeaderCtrl">
-    <nav class="top-nav indigo darken-4">
-        <div class="container">
-            <div class="nav-wrapper"><a class="page-title">BK IoT Platform</a></div>
-        </div>
-    </nav>
-    <ul id="slide-out" class="side-nav fixed">
-        <li class="logo">
-            <a id="logo-container" href="http://soict.hust.edu.vn/" class="brand-logo">
-                <img src="images/om2m-logo.png" class="responsive-img" />
-            </a>
-        </li>
-        <li ui-sref-active="active bold"><a class="waves-effect waves-orange" ui-sref="main.dashboard">{{'DASHBOARD' | translate}}</a></li>
-        <li ui-sref-active="active bold"><a class="waves-effect waves-orange" ui-sref="main.sensor">{{'SENSOR' | translate}}</a></li>
-        <li ui-sref-active="active bold"><a class="waves-effect waves-orange" ui-sref="main.chart">{{'CHART' | translate}}</a></li>
-        <li ui-sref-active="active bold"><a class="waves-effect waves-orange" ui-sref="main.nscl">{{'NSCL' | translate}}</a></li>
-    </ul>
-    <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-</div>
+<!-- Dropdown Structure -->
+<ul id="application" class="dropdown-content">
+    <li ui-sref-active="active">
+        <a class="waves-effect waves-light" ui-sref="main.licenseplate" translate="HEADER.LICENSEPLATE"></a>
+    </li>
+    <li class="divider"></li>
+    <li ui-sref-active="active">
+        <a class="waves-effect waves-light" ui-sref="main.gpstracking" translate="HEADER.GPSTRACKING"></a>
+    </li>
+    <li class="divider"></li>
+    <li ui-sref-active="active">
+        <a class="waves-effect waves-light" ui-sref="main.healthy" translate="HEADER.HEALTHY"></a>
+    </li>
+    <li class="divider"></li>
+    <li ui-sref-active="active">
+        <a class="waves-effect waves-light" ui-sref="main.deteingfall" translate="HEADER.DETEINGFALL"></a>
+    </li>
+</ul>
+<nav class="indigo darken-2" ng-controller="HeaderCtrl">
+    <div class="nav-wrapper">
+        <a class="brand-logo" ui-sref="main.dashboard" translate="HEADER.LOGO" style="margin-left: 15px;"></a>
+        <!-- activate side-bav in mobile view -->
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+        <ul class="right hide-on-med-and-down">
+            <li ui-sref-active="active">
+                <a class="waves-effect waves-light" ui-sref="main.dashboard" translate="HEADER.DASHBOARD"></a>
+            </li>
+            <li><a class="dropdown-button" href="#!" data-activates="application"><span translate="HEADER.APPLICATION"></span><i class="mdi-navigation-arrow-drop-down right"></i></a></li>
+        </ul>
+        <!-- navbar for mobile -->
+        <ul class="side-nav" id="mobile-demo">
+            <li ui-sref-active="active">
+                <a class="waves-effect waves-light" ui-sref="main.dashboard" translate="HEADER.DASHBOARD"></a>
+            </li>
+            <li ui-sref-active="active">
+                <a class="waves-effect waves-light" ui-sref="main.licenseplate" translate="HEADER.LICENSEPLATE"></a>
+            </li>
+            <li ui-sref-active="active">
+                <a class="waves-effect waves-light" ui-sref="main.gpstracking" translate="HEADER.GPSTRACKING"></a>
+            </li>
+            <li ui-sref-active="active">
+                <a class="waves-effect waves-light" ui-sref="main.healthy" translate="HEADER.HEALTHY"></a>
+            </li>
+            <li ui-sref-active="active">
+                <a class="waves-effect waves-light" ui-sref="main.deteingfall" translate="HEADER.DETEINGFALL"></a>
+            </li>
+        </ul>
+    </div>
+</nav>
 <script type="text/javascript">
+// Initialize collapse button
+$('.dropdown-button').dropdown({});
 $('.button-collapse').sideNav({
     menuWidth: 300, // Default is 240
     edge: 'right', // Choose the horizontal origin

@@ -9,11 +9,12 @@
  * Main module of the application.
  */
 angular
-  .module('iotApp', [
-    'ngAnimate',
-    'ngMessages',
-    'ui.router',
-    'pascalprecht.translate',
-    'chart.js',
-    'angular-jxon'
-  ]);
+    .module('iotApp', [
+        'ngAnimate',
+        'ngMessages',
+        'ui.router',
+        'pascalprecht.translate',
+        'chart.js',
+        'angular-jxon',
+        'angularUtils.directives.dirPagination'
+    ]);

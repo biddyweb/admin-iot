@@ -5,6 +5,7 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+    <link rel="icon shortcut" href="favicon.ico">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -13,7 +14,7 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" type="text/css" href="styles/custom-style.css" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
     <!-- endbuild -->
   </head>
   <body ng-app="iotApp">
@@ -38,25 +39,30 @@
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/Materialize/bin/materialize.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-messages/angular-messages.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-    <script src="bower_components/Materialize/bin/materialize.js"></script>
     <script src="bower_components/angular-translate/angular-translate.js"></script>
     <script src="bower_components/Chart.js/Chart.js"></script>
     <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
     <script src="bower_components/angular-jxon/dist/module.min.js"></script>
+    <script src="bower_components/angularUtils-pagination/dirPagination.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
+        <script src="scripts/lang_es.js"></script>
+        <script src="scripts/lang_vn.js"></script>
         <script src="scripts/config.router.js"></script>
-        <script src="scripts/services/authinterceptor.js"></script>
         <script src="scripts/controllers/header.js"></script>
         <script src="scripts/controllers/dashboard.js"></script>
-        <script src="scripts/controllers/sensor.js"></script>
+        <script src="scripts/controllers/licenseplate.js"></script>
+        <script src="scripts/controllers/detetingfall.js"></script>
+        <script src="scripts/controllers/gpstracking.js"></script>
+        <script src="scripts/controllers/healthy.js"></script>
         <!-- endbuild -->
 </body>
 </html>

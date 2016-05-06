@@ -1,0 +1,37 @@
+<table class="striped hover responsive-table">
+    <thead>
+        <tr>
+            <th data-field="stt">STT</th>
+            <th data-field="name" translate="DETETINGFALL.FULLNAME"></th>
+            <th data-field="gender" translate="DETETINGFALL.GENDER"></th>
+            <th data-field="age" translate="DETETINGFALL.AGE"></th>
+            <th data-field="height" translate="DETETINGFALL.HEIGHT"></th>
+            <th data-field="weight" translate="DETETINGFALL.WEIGHT"></th>
+            <th data-field="lat" translate="DETETINGFALL.LATITUDE"></th>
+            <th data-field="lng" translate="DETETINGFALL.LONGTITUDE"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <div class="row">
+            <div class="input-field col s12 m10 l10">
+                <input id="search" type="text" class="validate" ng-model="search" />
+                <label for="search" translate="HEADER.SEARCH"></label>
+            </div>
+            <div class="input-field col s6 m2 l2">
+                <span translate="HEADER.ITEMPERPAGE"></span>
+                <input id="pagiSize" type="number" class="validate" ng-model="pageSize" />
+            </div>
+        </div>
+        <tr dir-paginate="data in datas | filter:search | itemsPerPage: pageSize" current-page="currentPage" pagination-id="dataid">
+            <td>{{$index + 1}}</td>
+            <td>{{data.name}}</td>
+            <td>{{data.gender}}</td>
+            <td>{{data.age}}</td>
+            <td>{{data.height}}</td>
+            <td>{{data.weight}}</td>
+            <td>{{data.lat}}</td>
+            <td>{{data.lng}}</td>
+        </tr>
+    </tbody>
+</table>
+<dir-pagination-controls boundary-links="true" pagination-id="dataid" data-max-size="paginateSize" template-url="views/blocks/pagination.tpl.html"></dir-pagination-controls>

@@ -23,15 +23,16 @@ module.exports = function(config) {
     files: [
       // bower:js
       'bower_components/jquery/dist/jquery.js',
+      'bower_components/Materialize/bin/materialize.js',
       'bower_components/angular/angular.js',
       'bower_components/angular-animate/angular-animate.js',
       'bower_components/angular-messages/angular-messages.js',
       'bower_components/angular-ui-router/release/angular-ui-router.js',
-      'bower_components/Materialize/bin/materialize.js',
       'bower_components/angular-translate/angular-translate.js',
       'bower_components/Chart.js/Chart.js',
       'bower_components/angular-chart.js/dist/angular-chart.js',
       'bower_components/angular-jxon/dist/module.min.js',
+      'bower_components/angularUtils-pagination/dirPagination.js',
       // endbower
       "app/scripts/**/*.js",
       "test/mock/**/*.js",

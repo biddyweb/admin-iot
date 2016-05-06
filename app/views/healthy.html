@@ -1,0 +1,43 @@
+<table class="striped hover responsive-table">
+    <thead>
+        <tr>
+            <th data-field="ID" translate="HEALTHY.ID">ID</th>
+            <th data-field="category" translate="HEALTHY.CATEGORY"></th>
+            <th data-field="age" translate="HEALTHY.AGE"></th>
+            <th data-field="sex" translate="HEALTHY.SEX"></th>
+            <th data-field="region" translate="HEALTHY.REGION"></th>
+            <th data-field="domain" translate="HEALTHY.DOMAIN"></th>
+            <th data-field="smoking" translate="HEALTHY.SMOKING"></th>
+            <th data-field="tiensugd" translate="HEALTHY.FAMILY"></th>
+            <th data-field="pet" translate="HEALTHY.PET"></th>
+            <th data-field="fev" translate="HEALTHY.FEV1FVC"></th>
+            <th data-field="fvc" translate="HEALTHY.FEV1FEV_PRE"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <div class="row">
+            <div class="input-field col s12 m10 l10">
+                <input id="search" type="text" class="validate" ng-model="search" />
+                <label for="search" translate="HEADER.SEARCH"></label>
+            </div>
+            <div class="input-field col s6 m2 l2">
+                <span translate="HEADER.ITEMPERPAGE"></span>
+                <input id="pagiSize" type="number" class="validate" ng-model="pageSize" />
+            </div>
+        </div>
+        <tr dir-paginate="data in datas | filter:search | itemsPerPage: pageSize" current-page="currentPage" pagination-id="dataid">
+            <td>{{data.ID}}</td>
+            <td>{{data.category}}</td>
+            <td>{{data.age}}</td>
+            <td>{{data.sex}}</td>
+            <td>{{data.region}}</td>
+            <td>{{data.domain}}</td>
+            <td>{{data.smoking}}</td>
+            <td>{{data.tiensugd}}</td>
+            <td>{{data.pet}}</td>
+            <td>{{data.fev}}</td>
+            <td>{{data.fvc}}</td>
+        </tr>
+    </tbody>
+</table>
+<dir-pagination-controls boundary-links="true" pagination-id="dataid" data-max-size="paginateSize" template-url="views/blocks/pagination.tpl.html"></dir-pagination-controls>

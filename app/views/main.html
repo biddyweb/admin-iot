@@ -1,13 +1,21 @@
 <!-- header -->
-<header ng-include="'views/blocks/header.html'"></header> 
+<header ng-include="'views/blocks/header.html'"></header>
 <!-- /header -->
-
 <!-- content -->
 <main class="container">
-	<div ui-view></div>
+    <div ui-view></div>
 </main>
 <!-- /content -->
-
 <!-- Footer -->
 <div ng-include="'views/blocks/footer.html'" />
 <!-- /Footer -->
+<div class="fixed-action-btn" style="bottom: 45px; right: 24px;" ng-controller="HeaderCtrl">
+    <a class="btn-floating btn-large red">
+        LANG
+        <!-- <i class="large mdi-action-language"></i> -->
+    </a>
+    <ul>
+        <li><a style="transform: scaleY(0.4) scaleX(0.4) translateY(40px); opacity: 0;" class="btn-floating red accent-4" ng-click="changelang('es')">EN</a></li>
+        <li><a style="transform: scaleY(0.4) scaleX(0.4) translateY(40px); opacity: 0;" class="btn-floating indigo darken-3" ng-click="changelang('vn')">VN</a></li>
+    </ul>
+</div>
